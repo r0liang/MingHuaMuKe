@@ -1,9 +1,11 @@
 function RSAKeyToken(s,e,d,m)
 {
+	
 	setMaxDigits(130);
 	var skey = new RSAKeyPair(e,d,m);
 	var token = encryptedString(skey,s);
 	return(token);
+	
 }
 
 function RSAKeyPair(encryptionExponent, decryptionExponent, modulus)
